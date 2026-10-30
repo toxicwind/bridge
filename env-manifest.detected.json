@@ -1,0 +1,56 @@
+{
+  "product": "bridge",
+  "path": "/home/toxic/pens/ranch/products/bridge",
+  "files": 27,
+  "detected_at": "2026-10-30T06:11:06.021984Z",
+  "env_vars": {
+    "AWR_MCP_OUTPUT_DIR": [
+      "yote/tests/test_capout.py"
+    ],
+    "BRIDGE_OPEN_LOG": [
+      "bin/bridge-open.sh"
+    ],
+    "CONNECTOR_HTTP": [
+      "ripline/src/ripline.ts",
+      "ripline/src/transport.ts"
+    ],
+    "HOME": [
+      "ripline/src/fallover.ts",
+      "ripline/src/transport.ts"
+    ],
+    "MAINLINE": [
+      "ripline/src/fallover.ts"
+    ],
+    "RIPLINE_NO_FALLOVER": [
+      "ripline/src/fallover.ts"
+    ],
+    "VERSION": [
+      "ripline/src/ripline.ts"
+    ],
+    "eoff": [
+      "ripline/src/ripline.ts"
+    ],
+    "msg": [
+      "ripline/src/transport.ts"
+    ],
+    "path": [
+      "ripline/src/ripline.ts"
+    ],
+    "reason": [
+      "ripline/src/fallover.ts",
+      "ripline/src/ripline.ts"
+    ],
+    "soff": [
+      "ripline/src/ripline.ts"
+    ],
+    "sub": [
+      "ripline/src/ripline.ts"
+    ],
+    "svc": [
+      "ripline/src/ripline.ts"
+    ],
+    "tag": [
+      "ripline/src/ripline.ts"
+    ]
+  }
+}
