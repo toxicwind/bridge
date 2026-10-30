@@ -1,4 +1,8 @@
 {
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "bun-types": "^1.4.4"
+  },
   "name": "ripline",
   "version": "0.1.0",
   "description": "Fast Bun-native exec bridge for the hatch cell -> yote lane, with automatic fallover to mainline yote-conn.",

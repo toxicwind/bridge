@@ -3,7 +3,7 @@
 # (~/.cache/mcp-bg) with bg_list/bg_kill; adds native fleet (squawk),
 # yote_load, port_map, pitchfork_daemon tools so the fleet stops shelling
 # out for them. Canonical source: projects/bridge/yote/ in
-# toxicwind/sovereign-projects (deployed to /home/toxic/awrawr_mcp.py via
+# toxicwind/estate-projects (deployed to /home/toxic/awrawr_mcp.py via
 # apply_mcp_patch_mcp_smith.py — same idempotent pattern as bridge-max).
 import signal as _signal
 import shutil as _shutil
@@ -215,12 +215,12 @@ def pitchfork_daemon(name: str = "", action: str = "list") -> str:
             return "error: name required for restart"
         if name.split("/")[-1] in ("awrawr-ws-exec",):
             return "error: refusing to restart the live bridge (awrawr-ws-exec)"
-        cmd = ["/home/toxic/sovereign/bin/pitchfork-restart", name]
+        cmd = ["/home/toxic/estate/bin/pitchfork-restart", name]
     else:
         return "error: action must be list|status|restart"
     try:
         p = subprocess.run(cmd, capture_output=True, text=True, timeout=180,
-                           cwd="/home/toxic/sovereign")
+                           cwd="/home/toxic/estate")
         out = (p.stdout or "") + (p.stderr or "")
         return f"[exit={p.returncode}]\n{out[:8000]}" if out else \
             f"[exit={p.returncode}] (no output)"
