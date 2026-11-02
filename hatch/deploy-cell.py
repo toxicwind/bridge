@@ -32,15 +32,15 @@ YOTE_CONN = os.path.expanduser("~/workspace/bin/yote-conn")
 
 # (yote source path, cell dest path)
 FILES = [
-    ("/home/toxic/estate/ranch/bridge/hatch/connector.py",
+    ("/home/toxic/pens/estate/ranch/bridge/hatch/connector.py",
      os.path.expanduser("~/workspace/yote-connector/connector.py")),
-    ("/home/toxic/estate/ranch/bridge/hatch/supervise-connector.py",
+    ("/home/toxic/pens/estate/ranch/bridge/hatch/supervise-connector.py",
      os.path.expanduser("~/workspace/yote-connector/supervise-connector.py")),
-    ("/home/toxic/estate/ranch/bridge/hatch/start-detached.py",
+    ("/home/toxic/pens/estate/ranch/bridge/hatch/start-detached.py",
      os.path.expanduser("~/workspace/yote-connector/start-detached.py")),
-    ("/home/toxic/estate/gear/awrawr-mcp/bin/exec.py",
+    ("/home/toxic/pens/estate/gear/awrawr-mcp/bin/exec.py",
      os.path.expanduser("~/workspace/awrawr-bridge/exec.py")),
-    ("/home/toxic/estate/ranch/bridge/hatch/yote-conn",
+    ("/home/toxic/pens/estate/ranch/bridge/hatch/yote-conn",
      os.path.expanduser("~/workspace/bin/yote-conn")),
 ]
 
