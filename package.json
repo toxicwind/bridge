@@ -1,0 +1,25 @@
+{
+  "name": "bridge",
+  "version": "1.0.0",
+  "description": "bridge — hatch→yote bridge exec maximal layer",
+  "module": "src/index.ts",
+  "type": "module",
+  "bin": {
+    "yote-conn": "./bin/yote-conn.ts"
+  },
+  "scripts": {
+    "dev": "bun --hot run bin/yote-conn.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "biome check .",
+    "fmt": "biome format --write .",
+    "build": "bun build bin/yote-conn.ts --outdir ./dist"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "latest",
+    "bun-types": "latest",
+    "typescript": "^5.6.3"
+  },
+  "private": true
+}
