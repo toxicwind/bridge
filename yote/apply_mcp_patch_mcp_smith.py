@@ -8,7 +8,7 @@ import sys
 TARGET = "/home/toxic/awrawr_mcp.py"
 ANCHOR = "# --- hft race tool ---"
 MARKER = "mcp-smith: fleet / introspection / bg tools"
-BLOCK_SRC = "/home/toxic/pens/estate/ranch/bridge/yote/mcp_patch_block_mcp_smith.py"
+BLOCK_SRC = "/home/toxic/pens/Pens/ranch/bridge/yote/mcp_patch_block_mcp_smith.py"
 
 
 def main():

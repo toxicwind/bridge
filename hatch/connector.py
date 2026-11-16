@@ -40,7 +40,7 @@ Service proxying is HTTP-over-exec via /home/toxic/.cache/yote_svc_proxy.py
 on yote: one exec call per proxied request, no new yote ports, no server
 changes. Only 127.0.0.1 is bound (cell-local callers).
 
-Canonical source: projects/bridge/hatch/connector.py in toxicwind/estate-scripts-projects.
+Canonical source: projects/bridge/hatch/connector.py in toxicwind/Pens-scripts-projects.
 """
 import base64
 import importlib.util
@@ -63,7 +63,7 @@ PORT = int(os.environ.get("YOTE_CONNECTOR_PORT", "18301"))
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 _START_TIME = time.time()  # process boot; reported by /livez
-# exec.py canonical source: gear/awrawr-mcp/bin/exec.py in toxicwind/estate-scripts-projects.
+# exec.py canonical source: gear/awrawr-mcp/bin/exec.py in toxicwind/Pens-scripts-projects.
 # The cell-side copy at ~/workspace/awrawr-bridge/exec.py must be synced from there.
 BRIDGE_EXEC = os.path.expanduser("~/workspace/awrawr-bridge/exec.py")
 YOTE_HELPER = "/home/toxic/.cache/yote_svc_proxy.py"
@@ -72,9 +72,9 @@ MAX_BODY = 10 * 1024 * 1024
 
 # --- bridge-max: background dispatch ---------------------------------------
 BG_BASE_YOTE = "/home/toxic/.cache/bridge-bg"
-BG_RUN_PY = "/home/toxic/pens/estate/ranch/bridge/bin/bg-run.py"
-BG_STATUS_PY = "/home/toxic/pens/estate/ranch/bridge/bin/bg-status.py"
-BG_KILL_PY = "/home/toxic/pens/estate/ranch/bridge/bin/bg-kill.py"
+BG_RUN_PY = "/home/toxic/pens/Pens/ranch/bridge/bin/bg-run.py"
+BG_STATUS_PY = "/home/toxic/pens/Pens/ranch/bridge/bin/bg-status.py"
+BG_KILL_PY = "/home/toxic/pens/Pens/ranch/bridge/bin/bg-kill.py"
 REGISTRY = os.path.expanduser("~/.cache/bridge-bg-registry.json")
 HANDLE_RX = re.compile(r"^[A-Za-z0-9_-]{1,64}$")
 

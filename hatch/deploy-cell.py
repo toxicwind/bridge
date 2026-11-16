@@ -5,7 +5,7 @@ Cell-side deploy script. Pulls the canonical files from yote via the bridge,
 installs them to the managed cell paths, verifies SHA256, and restarts the
 connector.
 
-Canonical sources (toxicwind/estate-scripts-projects on yote):
+Canonical sources (toxicwind/Pens-scripts-projects on yote):
   projects/bridge/hatch/connector.py           -> ~/workspace/yote-connector/connector.py
   projects/bridge/hatch/supervise-connector.py  -> ~/workspace/yote-connector/supervise-connector.py
   projects/bridge/hatch/start-detached.py       -> ~/workspace/yote-connector/start-detached.py
@@ -32,15 +32,15 @@ YOTE_CONN = os.path.expanduser("~/workspace/bin/yote-conn")
 
 # (yote source path, cell dest path)
 FILES = [
-    ("/home/toxic/pens/estate/ranch/bridge/hatch/connector.py",
+    ("/home/toxic/pens/Pens/ranch/bridge/hatch/connector.py",
      os.path.expanduser("~/workspace/yote-connector/connector.py")),
-    ("/home/toxic/pens/estate/ranch/bridge/hatch/supervise-connector.py",
+    ("/home/toxic/pens/Pens/ranch/bridge/hatch/supervise-connector.py",
      os.path.expanduser("~/workspace/yote-connector/supervise-connector.py")),
-    ("/home/toxic/pens/estate/ranch/bridge/hatch/start-detached.py",
+    ("/home/toxic/pens/Pens/ranch/bridge/hatch/start-detached.py",
      os.path.expanduser("~/workspace/yote-connector/start-detached.py")),
-    ("/home/toxic/pens/estate/gear/awrawr-mcp/bin/exec.py",
+    ("/home/toxic/pens/Pens/gear/awrawr-mcp/bin/exec.py",
      os.path.expanduser("~/workspace/awrawr-bridge/exec.py")),
-    ("/home/toxic/pens/estate/ranch/bridge/hatch/yote-conn",
+    ("/home/toxic/pens/Pens/ranch/bridge/hatch/yote-conn",
      os.path.expanduser("~/workspace/bin/yote-conn")),
 ]
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 try:
     import sys, os
-    sys.path.insert(0, os.path.expanduser('/home/toxic/pens/estate'))
+    sys.path.insert(0, os.path.expanduser('/home/toxic/pens/Pens'))
     from tools.toon import encode as _toon_encode, MARKER as _TOON_MARKER
     from tools.rank import rank_tools as _rank_tools
     from tools.risk import assess as _risk_assess
@@ -246,7 +246,7 @@ def _canonical_spawn_env():
 
 
 
-# --- output persistence (Tansy 2026-10-19, mirrors TS capOut estate 6e62d2c939) ---
+# --- output persistence (Tansy 2026-10-19, mirrors TS capOut Pens 6e62d2c939) ---
 # Truncated tool output used to be silently dropped at the cap. Now the
 # COMPLETE output is persisted to a durable dir under HOME (not /tmp:
 # tmpfs + janitor sweeps made /tmp-saved outputs vanish before retrieval).
@@ -815,7 +815,7 @@ def fleet_answer(ask_id: str, text: str, channel: str = "fleet",
     return f"answered {ask_id} seq={seq} ({fname})"
 
 
-# --- estate introspection ----------------------------------------------------
+# --- Pens introspection ----------------------------------------------------
 @mcp.tool()
 def yote_load() -> str:
     """Yote load average vs CPU cores, memory, and top CPU processes.
@@ -910,12 +910,12 @@ def pitchfork_daemon(name: str = "", action: str = "list") -> str:
         if name.split("/")[-1] in ("awrawr-ws-exec", "awrawr-mcp"):
             return ("error: refusing to restart a live transport lane "
                     "(awrawr-ws-exec/awrawr-mcp)")
-        cmd = ["/home/toxic/pens/estate/bin/pitchfork-restart", name]
+        cmd = ["/home/toxic/pens/Pens/bin/pitchfork-restart", name]
     else:
         return "error: action must be list|status|restart"
     try:
         p = subprocess.run(cmd, capture_output=True, text=True, timeout=180,
-                           cwd="/home/toxic/pens/estate")
+                           cwd="/home/toxic/pens/Pens")
         out = (p.stdout or "") + (p.stderr or "")
         return f"[exit={p.returncode}]\n{out[:8000]}" if out else \
             f"[exit={p.returncode}] (no output)"
@@ -1304,10 +1304,10 @@ tools/call over localhost.
 # --- mesh (mcpproxy/gatehouse) proxy -------------------------------------------
 MESH_MCP_URL = os.environ.get("MESH_MCP_URL", "http://127.0.0.1:25127/mcp")
 MESH_SHEP_BIN = os.environ.get(
-    "MESH_SHEP_BIN", "/home/toxic/pens/estate/ranch/mesh/bin/gatehouse")
+    "MESH_SHEP_BIN", "/home/toxic/pens/Pens/ranch/mesh/bin/gatehouse")
 MESH_SHEP_CONFIG = os.environ.get(
     "MESH_SHEP_CONFIG",
-    "/home/toxic/pens/estate/ranch/barn/gatehouse/mcp_config.json")
+    "/home/toxic/pens/Pens/ranch/barn/gatehouse/mcp_config.json")
 MESH_OUT_CAP = 20000
 _MESH_INTENTS = {"read": "call_tool_read", "write": "call_tool_write",
                  "destructive": "call_tool_destructive"}
@@ -1476,12 +1476,12 @@ def mesh_call_tool(tool_name: str, arguments_json: str = "{}",
 # dispatch stays in the agent runtime (yote has no chat tools). Single source
 # of truth is the shim file; these are thin wrappers.
 #
-# Hatch moved 2026-10-02: /home/toxic/pens/estate/hatch -> /home/toxic/hatch.
+# Hatch moved 2026-10-02: /home/toxic/pens/Pens/hatch -> /home/toxic/hatch.
 # The shim dir is resolved at runtime (canonical first, legacy fallback) --
 # no hardcoded host paths.
 # ---------------------------------------------------------------------------
 def _resolve_shim_dir() -> str:
-    for candidate in ("/home/toxic/hatch", "/home/toxic/pens/estate/hatch"):
+    for candidate in ("/home/toxic/hatch", "/home/toxic/pens/Pens/hatch"):
         try:
             if os.path.isfile(os.path.join(candidate, "sidechat_shim.py")):
                 return candidate

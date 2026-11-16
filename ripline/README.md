@@ -100,7 +100,7 @@ opt-in per call, and falls over to `yote-conn` on its own failures.
 - GitHub-wide pattern-borrow ("remote shell exec bridge", "bun unix socket
   client", "websocket command dispatch"): persistent multiplexed unix-socket
   clients, dispatch-gated first-valid-wins, fail-fast degraded steady-state.
-- Estate: `exec.py` WS/HTTPS race + down-flag TTLs, hft-latency skill
+- Pens: `exec.py` WS/HTTPS race + down-flag TTLs, hft-latency skill
   (race redundant paths, measure every hop, never retry-spin),
   `yote-conn-fast` (Bun→socket direct, the proven fast path).
 - Paper pass (paper-poller `race_papers.py`): nothing directly applicable to
